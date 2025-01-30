@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import FormVagas from '../FormVagas';
+import Vaga from '../../components/Vaga';
 import Vaga from '../Vaga';
 import { ListaContainer, VagasList } from './ListaVagas.styles';
 

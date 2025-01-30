@@ -14,4 +14,6 @@ const Vaga = ({ titulo, localizacao, nivel, link }: Props) => {
       <p>📍 {localizacao}</p>
       <p>💼 {nivel}</p>
       <VagaLink href={link} target="_blank" rel="noopener noreferrer">
-
+        Ver detalhes
+      </VagaLink>
+    export default Vaga;
