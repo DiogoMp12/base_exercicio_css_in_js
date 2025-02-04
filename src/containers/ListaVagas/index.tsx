@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Vaga from '../../components/Vaga';
-import Vaga from '../Vaga';
 import { ListaContainer, VagasList } from './ListaVagas.styles';
+import FormVagas from '../../components/FormVagas';
 
 type VagaProps = {
   id: number;
@@ -12,16 +12,34 @@ type VagaProps = {
 };
 
 const vagasMock: VagaProps[] = [
-  { id: 1, titulo: 'Desenvolvedor Front-End', localizacao: 'Remoto', nivel: 'Júnior', link: '#' },
-  { id: 2, titulo: 'Designer de Interfaces', localizacao: 'São Paulo', nivel: 'Pleno', link: '#' },
-  { id: 3, titulo: 'Desenvolvedor Fullstack', localizacao: 'Rio de Janeiro', nivel: 'Sênior', link: '#' },
+  {
+    id: 1,
+    titulo: 'Desenvolvedor Front-End',
+    localizacao: 'Remoto',
+    nivel: 'Júnior',
+    link: '#',
+  },
+  {
+    id: 2,
+    titulo: 'Designer de Interfaces',
+    localizacao: 'São Paulo',
+    nivel: 'Pleno',
+    link: '#',
+  },
+  {
+    id: 3,
+    titulo: 'Desenvolvedor Fullstack',
+    localizacao: 'Rio de Janeiro',
+    nivel: 'Sênior',
+    link: '#',
+  },
 ];
 
 const ListaVagas = () => {
   const [filtro, setFiltro] = useState<string>('');
 
   const vagasFiltradas = vagasMock.filter((vaga) =>
-    vaga.titulo.toLowerCase().includes(filtro.toLowerCase())
+    vaga.titulo.toLowerCase().includes(filtro.toLowerCase()),
   );
 
   return (

@@ -23,4 +23,5 @@ export const Button = styled.button`
   color: var(--cor-secundaria);
   margin-left: 8px;
   cursor: pointer;
+  border-radius: 3px;
 `;
